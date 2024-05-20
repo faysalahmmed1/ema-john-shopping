@@ -1,6 +1,6 @@
 import './Login.css';
 
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../firebase.init';
@@ -10,7 +10,10 @@ const Login = () => {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
     const navigate = useNavigate();
+    const location = useLocation();
+    const from = location.state?.from?.pathname || '/'
 
 
     const [
@@ -23,7 +26,7 @@ const Login = () => {
     if (error) {
         return (
             <div>
-                <p style={{textAlign:'center',color:'red',fontSize:'20px'}}>Wrong password {error.message}</p>
+                <p style={{ textAlign: 'center', color: 'red', fontSize: '20px' }}>Wrong password {error.message}</p>
             </div>
         );
     }
@@ -32,7 +35,7 @@ const Login = () => {
     }
 
     if (user) {
-        navigate('/inventory');
+        navigate(from, { replace: true });
 
     }
 
