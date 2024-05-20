@@ -1,0 +1,62 @@
+.logSigin-container {
+    border: solid 2px rgb(208, 169, 169);
+    box-sizing: border-box;
+    justify-content: center;
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+.input input {
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 10px;
+    width: 90%;
+
+}
+
+.signin {
+    font-size: 40px;
+    color: red;
+    text-align: center;
+}
+
+.input-form {
+    justify-content: center;
+    margin: 20px;
+}
+
+.sumit-btn {
+    background-color: blue;
+    padding: 10px;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 10px;
+    color: wheat;
+    width: 95%;
+    cursor: pointer;
+}
+
+.label-email {
+    font-size: 20px;
+    font: bold;
+}
+
+.label-password {
+    font-size: 20px;
+    font: bold;
+}
+
+.create-new {
+    text-align: center;
+
+}
+
+.linkinsigin {
+    text-decoration: none;
+    color: red;
+}
+
+
+
